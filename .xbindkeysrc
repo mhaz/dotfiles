@@ -1,0 +1,15 @@
+# Mute volume
+sh -c "pactl set-sink-mute 0 toggle"
+   XF86AudioMute
+
+# Decrease volume
+sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -5%"
+   XF86AudioLowerVolume
+
+# Increase volume
+sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 +5%"
+   XF86AudioRaiseVolume
+
+# Remap the ThinkVantage button
+sh -c "emacsclient -c --alternate-editor=emacs"
+    XF86Launch1
