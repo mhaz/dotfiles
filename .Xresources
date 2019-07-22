@@ -1,0 +1,103 @@
+Xcursor.size: 8
+! Clickable links
+*perl-ext-common: default,matcher
+*url-launcher:    firefox
+*matcher.button:  1
+
+! Remap copy paste to C-S-c and C-S-v
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+! ibus
+URxvt.inputMethod: ibus
+URxvt.preeditType: OverTheSpot
+
+!! RICE
+! Make minimal
+*scrollBar:      false
+*internalBorder: 20
+*geometry:       65x15
+
+! Change cursor
+*cursorUnderline: true
+*cursorBlink: true
+
+! Set font
+URxvt.font: -windows-dina-medium-r-normal--12-90-96-96-c-70-iso8859-1
+! from /usr/share/fonts/misc/fonts.dir
+!
+URxvt.boldFont:
+URxvt.italicFont:
+URxvt.boldItalicFont:
+!
+!*font: xft:IBM Plex Mono:style=Regular:pixelsize=12
+!*boldFont: xft:IBM Plex Mono:style=Bold:pixelsize=12
+!*italicFont: xft:IBM Plex Mono:style=Italic:pixelsize=12
+!*boldItalicFont: xft:IBM Plex Mono:style=Bold Italic:pixelsize=12
+!!URxvt.letterSpace: -1
+!URxvt.letterSpace: -1
+*lineSpace:      8
+
+!! COLORS
+! special
+URxvt.foreground:   #ffffff
+URxvt.background:   #000000
+URxvt.cursorColor:  #cccccc
+
+! black
+URxvt.color0:       #000000
+URxvt.color8:       #aaaaaa
+
+! red
+URxvt.color1:       #ff6666
+URxvt.color9:       #ff4444
+
+! green
+URxvt.color2:       #99ffaa
+URxvt.color10:      #55ff99
+
+! yellow
+URxvt.color3:       #ffff88
+URxvt.color11:      #ffff00
+
+! blue
+URxvt.color4:       #2266ff
+URxvt.color12:      #1144ff
+
+! magenta
+URxvt.color5:       #ff55ff
+URxvt.color13:      #ff00ff
+
+! cyan
+URxvt.color6:       #77ffff
+URxvt.color14:      #22ffff
+
+! white
+URxvt.color7:       #ffffff
+URxvt.color15:      #dddddd
+
+
+! Enable the extended coloring options
+rofi.color-enabled: true
+!                  bg       border   separator
+rofi.color-window: #222222, #aaaaaa, #aaaaaa
+!                  bg       fg       bg-alt   hl-bg    hl-fg
+rofi.color-normal: #222222, #eeeeee, #333333, #666666, #ffffaa
+rofi.color-active: #dd9911, #222222, #dd9911, #ffbb22, #222222
+rofi.color-urgent: #dd2222, #222222, #dd2222, #ffaaaa, #222222
+
+rofi.separator-style: solid
+rofi.sidebar-mode: true
+rofi.bw: 1
+rofi.columns: 1
+rofi.padding: 16
+
+rofi.yoffset: 0
+rofi.fake-transparency: false
+rofi.location: 0
+rofi.width: 50
+rofi.font: IBM Plex Mono 12
+rofi.lines: 15
+rofi.fixed-num-lines: true
