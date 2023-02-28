@@ -27,8 +27,10 @@ add        mod3 = Hyper_L
 add        mod4 = Super_L Super_R
 add        mod5 = Mode_switch ISO_Level3_Shift
 
-! Context menu to Super
+! Context menu to Super (Thinkpad T480)
 keycode 135 = Super_R
+! Print to Super (Thinkpad X280)
+keycode 107 = Super_R
 
 !hiragana / katakana to compose key
 ! https://en.wikipedia.org/wiki/Compose_key
