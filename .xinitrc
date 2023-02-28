@@ -5,13 +5,13 @@ xrdb $HOME/.Xresources
 urxvtd -q -o -f
 
 # Add shadows
-compton -b --backend xrender -cC -l -18 -t -18 -o 0.1
+compton -b --backend xrender -cC -l -18 -t -0 -o 0.1
 
 #  thinkpad volume keys
 xbindkeys
 
 # Japanese input with Ibus
-ibus-daemon &
+ibus-daemon -drxR &
 
 # nm-applet
 nm-applet &
