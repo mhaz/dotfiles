@@ -1,8 +1,20 @@
 Xcursor.size: 8
 ! Clickable links
-*perl-ext-common: default,matcher
+! Resize font from https://github.com/simmel/urxvt-resize-font
+*perl-ext-common: default,matcher,resize-font,fullscreen
 *url-launcher:    firefox
 *matcher.button:  1
+
+! Fix bug where the line displays in the middle of the screen
+! https://bbs.archlinux.org/viewtopic.php?id=282889
+! https://bbs.archlinux.org/viewtopic.php?id=282791
+! https://gitlab.alpinelinux.org/alpine/aports/-/issues/14525
+URxvt.geometry: 400x400
+
+! f11 for fullscreen
+! First need to install urxvt-fullscreen from the AUR
+! https://wiki.archlinux.org/title/Rxvt-unicode#Fullscreen
+URxvt.keysym.F11: perl:fullscreen:switch
 
 ! Remap copy paste to C-S-c and C-S-v
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
@@ -24,26 +36,29 @@ URxvt.preeditType: OverTheSpot
 *cursorUnderline: true
 *cursorBlink: true
 
-! Set font
-URxvt.font: -windows-dina-medium-r-normal--12-90-96-96-c-70-iso8859-1
-! from /usr/share/fonts/misc/fonts.dir
-!
-URxvt.boldFont:
-URxvt.italicFont:
-URxvt.boldItalicFont:
-!
-!*font: xft:IBM Plex Mono:style=Regular:pixelsize=12
-!*boldFont: xft:IBM Plex Mono:style=Bold:pixelsize=12
-!*italicFont: xft:IBM Plex Mono:style=Italic:pixelsize=12
-!*boldItalicFont: xft:IBM Plex Mono:style=Bold Italic:pixelsize=12
-!!URxvt.letterSpace: -1
-!URxvt.letterSpace: -1
+! ! Set font
+! URxvt.font: -windows-dina-medium-r-normal--12-90-96-96-c-70-iso8859-1
+! ! from /usr/share/fonts/misc/fonts.dir
+! !
+! URxvt.boldFont:
+! URxvt.italicFont:
+! URxvt.boldItalicFont:
+! !
+! !*font: xft:IBM Plex Mono:style=Regular:pixelsize=12
+! !*boldFont: xft:IBM Plex Mono:style=Bold:pixelsize=12
+! !*italicFont: xft:IBM Plex Mono:style=Italic:pixelsize=12
+! !*boldItalicFont: xft:IBM Plex Mono:style=Bold Italic:pixelsize=12
+! !!URxvt.letterSpace: -1
+! !URxvt.letterSpace: -1
+
+URxvt*font: xft:Iosevka:style=Regular:pixelsize=16
 *lineSpace:      8
 
 !! COLORS
 ! special
 URxvt.foreground:   #ffffff
 URxvt.background:   #000000
+
 URxvt.cursorColor:  #cccccc
 
 ! black
@@ -79,25 +94,25 @@ URxvt.color7:       #ffffff
 URxvt.color15:      #dddddd
 
 
-! Enable the extended coloring options
-rofi.color-enabled: true
-!                  bg       border   separator
-rofi.color-window: #222222, #aaaaaa, #aaaaaa
-!                  bg       fg       bg-alt   hl-bg    hl-fg
-rofi.color-normal: #222222, #eeeeee, #333333, #666666, #ffffaa
-rofi.color-active: #dd9911, #222222, #dd9911, #ffbb22, #222222
-rofi.color-urgent: #dd2222, #222222, #dd2222, #ffaaaa, #222222
+! ! Enable the extended coloring options
+! rofi.color-enabled: true
+! !                  bg       border   separator
+! rofi.color-window: #222222, #aaaaaa, #aaaaaa
+! !                  bg       fg       bg-alt   hl-bg    hl-fg
+! rofi.color-normal: #222222, #eeeeee, #333333, #666666, #ffffaa
+! rofi.color-active: #dd9911, #222222, #dd9911, #ffbb22, #222222
+! rofi.color-urgent: #dd2222, #222222, #dd2222, #ffaaaa, #222222
 
-rofi.separator-style: solid
-rofi.sidebar-mode: true
-rofi.bw: 1
-rofi.columns: 1
-rofi.padding: 16
+! rofi.separator-style: solid
+! rofi.sidebar-mode: true
+! rofi.bw: 1
+! rofi.columns: 1
+! rofi.padding: 16
 
-rofi.yoffset: 0
-rofi.fake-transparency: false
-rofi.location: 0
-rofi.width: 50
-rofi.font: IBM Plex Mono 12
-rofi.lines: 15
-rofi.fixed-num-lines: true
+! rofi.yoffset: 0
+! rofi.fake-transparency: false
+! rofi.location: 0
+! rofi.width: 50
+! rofi.font: IBM Plex Mono 12
+! rofi.lines: 15
+! rofi.fixed-num-lines: true
